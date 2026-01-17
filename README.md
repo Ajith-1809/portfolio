@@ -1,80 +1,101 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=280&section=header&text=Ajithkumar%20V&fontSize=80&animation=fadeIn&fontAlignY=35&desc=Full%20Stack%20Developer%20%7C%20Tech%20Enthusiast&descAlignY=55&descAlign=60" alt="Header" width="100%" />
+# ✨ Ajith's Developer Portfolio ✨
 
-  <br/>
+### _A modern, responsive, and feature-rich portfolio website built with React and Node.js_
 
-  <a href="https://github.com/Ajith-1809">
-    <img src="https://img.shields.io/github/followers/Ajith-1809?style=social&label=Follow&color=blue" alt="Follow" />
+<p align="center">
+  <a href="https://github.com/Ajith-1809/portfolio">
+    <img src="https://komarev.com/ghpvc/?username=Ajith-1809&style=flat-square&color=blueviolet" alt="Profile Views"/>
   </a>
   <a href="https://github.com/Ajith-1809/portfolio/stargazers">
-    <img src="https://img.shields.io/github/stars/Ajith-1809/portfolio?style=social&label=Stars" alt="Stars" />
+    <img src="https://img.shields.io/github/stars/Ajith-1809/portfolio?style=flat-square&color=yellow" alt="Stars"/>
   </a>
-
-  <br/>
-  <br/>
-
-  <p align="center">
-    <b>🚀 Transforming ideas into digital reality through code.</b><br/>
-    <i>A modern, responsive, and feature-rich portfolio showcasing my journey as a developer.</i>
-  </p>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"/>
+  </a>
+</p>
 
 </div>
 
 ---
 
-## 👨‍💻 About Me
+> This project is a complete showcase of my abilities as a Frontend Developer. It features a sleek design, engaging animations, and a custom backend for the interactive comment section. It's built from the ground up to be a perfect blend of aesthetics and functionality.
 
-I am an **IT/Software Student** and a passionate **Tech Enthusiast** with a strong focus on **Frontend**, **Backend**, and **Fullstack** development. I love building interactive, user-friendly applications and exploring new technologies.
-
-- 🔭 I’m currently working on **Advanced Web Applications**
-- 🌱 I’m currently learning **AI integration in Frontend**
-- 💬 Ask me about **React, Node.js, Java, MySQL**
-
----
-
-## 🛠️ Tech Stack
+<br>
 
 <div align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,js,html,css,tailwind,nodejs,express,java,mysql,firebase,materialui,git,github,vscode&perline=7" />
-  </a>
+
+**[Report Bug](https://github.com/Ajith-1809/portfolio/issues) &nbsp;&nbsp;•&nbsp;&nbsp; [Request Feature](https://github.com/Ajith-1809/portfolio/issues)**
+
 </div>
 
----
-
-## 🧩 Featured Projects
-
-| Project | Description | Tech Stack | Links |
-| :--- | :--- | :--- | :--- |
-| **Portfolio Website** | A complete showcase of my abilities featuring sleek design, engaging animations, and a custom backend for comments. | `React` `Tailwind` `Node.js`  | Repo |
-| **Weather App** | Real-time weather application providing accurate forecasts with a clean UI and rapid data fetching. | `React` `CSS` `OpenWeather API` | Repo | (upload pending)
-| **E-Commerce Dashboard** | Comprehensive dashboard for managing online stores, inventory tracking, and sales analytics. | `React` `Material UI` | Repo | (upload pending)
-
----
-
-##  GitHub Stats
+<br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ajith-1809&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" alt="Stats" height="180" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ajith-1809&layout=compact&theme=tokyonight&hide_border=true&bg_color=00000000" alt="Languages" height="180" />
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(11).png" alt="Project Screenshot" width="90%">
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(14).png" alt="Project Screenshot" width="90%">
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(15).png" alt="Project Screenshot" width="90%">
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(16).png" alt="Project Screenshot" width="90%">
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(17).png" alt="Project Screenshot" width="90%">
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(18).png" alt="Project Screenshot" width="90%">
+  <img src="https://github.com/Ajith-1809/portfolio/blob/main/screenshots/Screenshot%20(19).png" alt="Project Screenshot" width="90%">
+  <br>
+  <em>(Screenshot of my portfolio)</em>
 </div>
+
+---
+
+## 🌟 Core Features
+
+| Feature                   | Description                                                                                             | Icon          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------- | ------------- |
+| **Modern UI/UX**          | A stunning, dark-themed interface with beautiful gradients and a professional layout.                   | 🎨            |
+| **Interactive Animations**| Engaging animations powered by `AOS` and custom CSS to bring the content to life.                       | ✨            |
+| **Custom Backend**        | A **Node.js & Express** backend to handle comments, providing a full-stack project experience. | ⚙️            |
+| **Fully Responsive**      | The layout fluidly adapts to all screen sizes, ensuring a perfect experience on any device.             | 📱            |
+| **Dynamic Elements**      | Features like a typing effect for the introduction make the website feel alive and personal.            | 💡            |
+
+---
+
+## 🛠️ Tech Stack & Tools
+
+This portfolio leverages a variety of modern technologies to achieve its high-end look and feel.
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+  <img src="https://img.shields.io/badge/JavaScript_(ES6+)-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js">
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+</p>
 
 ---
 
 ## 📂 Project Structure
 
+Here is a look at the project's file structure, designed for clarity and scalability.
+
+<details>
+  <summary><strong>Click to expand file tree</strong></summary>
+
 ```sh
 portfolio/
-├── 📁 backend/          # Express.js server & Database logic
-├── 📁 public/           # Static assets
+├── 📁 backend/
+│   ├── 📄 server.js         # Express.js server logic
+│   └── 📄 db.json            # JSON file as a simple database
+├── 📁 public/              # Static assets
 ├── 📁 src/
-│   ├── 📁 assets/       # Images, fonts, icons
-│   ├── 📁 components/   # Reusable React components
-│   ├── 📁 Pages/        # Main Page views
-│   ├── 📄 datafiles.js  # Centralized data configuration
-│   ├── ⚛️ App.jsx       # Main application component
-│   └── ⚛️ main.jsx      # Entry point
+│   ├── 📁 assets/           # Images, fonts, etc.
+│   ├── 📁 components/       # Reusable React components (Commentar.jsx, etc.)
+│   ├── 📁 Pages/            # Page components (Home.jsx)
+│   ├── ⚛️ App.jsx           # Main application component with routing
+│   └── ⚛️ main.jsx          # React application entry point
+├── 📄 .gitignore
+├── 📄 index.html
+├── 📄 package.json
 └── 📄 README.md
 ```
 
