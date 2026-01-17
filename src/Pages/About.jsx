@@ -1,0 +1,246 @@
+import React, { memo, useMemo } from "react";
+import { motion } from "framer-motion";
+import {
+  FileText,
+  Code,
+  Award,
+  Globe,
+  ArrowUpRight,
+  Sparkles,
+} from "lucide-react";
+import { certificateData, projectData } from "../datafiles";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const Header = memo(() => (
+  <motion.div
+    className="text-center lg:mb-8 mb-2 px-[5%]"
+    variants={containerVariants}
+    initial="hidden"
+    animate="visible"
+  >
+    <motion.div className="inline-block relative group" variants={itemVariants}>
+      <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+        About Me
+      </h2>
+    </motion.div>
+    <motion.p
+      className="mt-2 text-gray-400 max-w-2xl mx-auto text-base sm:text-lg flex items-center justify-center gap-2"
+      variants={itemVariants}
+    >
+      <Sparkles className="w-5 h-5 text-purple-400" />
+      Transforming ideas into digital experiences
+      <Sparkles className="w-5 h-5 text-purple-400" />
+    </motion.p>
+  </motion.div>
+));
+
+const ProfileImage = memo(() => (
+  <motion.div
+    className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2"
+    variants={itemVariants}
+  >
+    <div className="relative group">
+      <div className="relative">
+        <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
+          <motion.img
+            src="./src/Photo.png"
+            alt="Profile"
+            className="w-full h-full object-cover"
+            loading="lazy"
+            whileHover={{ scale: 1.1, rotate: 2 }}
+          />
+        </div>
+      </div>
+    </div>
+  </motion.div>
+));
+
+const StatCard = memo(
+  ({ icon: Icon, color, value, label, description }) => (
+    <motion.div
+      className="relative group"
+      variants={itemVariants}
+      whileHover={{ scale: 1.05 }}
+    >
+      <div className="relative z-10 bg-gray-900/50 backdrop-blur-lg rounded-2xl p-6 border border-white/10 overflow-hidden transition-all duration-300 hover:shadow-2xl h-full flex flex-col justify-between">
+        <div
+          className={`absolute -z-10 inset-0 bg-gradient-to-br ${color} opacity-10 group-hover:opacity-20 transition-opacity duration-300`}
+        ></div>
+
+        <div className="flex items-center justify-between mb-4">
+          <motion.div
+            className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10"
+            whileHover={{ rotate: 6 }}
+          >
+            <Icon className="w-8 h-8 text-white" />
+          </motion.div>
+          <span className="text-4xl font-bold text-white">{value}</span>
+        </div>
+
+        <div>
+          <p className="text-sm uppercase tracking-wider text-gray-300 mb-2">
+            {label}
+          </p>
+          <div className="flex items-center justify-between">
+            <p className="text-xs text-gray-400">{description}</p>
+            <ArrowUpRight className="w-4 h-4 text-white/50 group-hover:text-white transition-colors" />
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
+);
+
+const AboutPage = () => {
+  // Memoized calculations
+  const { totalProjects, totalCertificates, YearExperience } = useMemo(() => {
+    const startDate = new Date("2024-11-01");
+    const today = new Date();
+    const experience =
+      today.getFullYear() -
+      startDate.getFullYear() -
+      (today <
+      new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate())
+        ? 1
+        : 0);
+
+    return {
+      totalProjects: projectData.length,
+      totalCertificates: certificateData.length,
+      YearExperience: experience,
+    };
+  }, []);
+
+  // Memoized stats data
+  const statsData = useMemo(
+    () => [
+      {
+        icon: Code,
+        color: "from-[#6366f1] to-[#a855f7]",
+        value: totalProjects,
+        label: "Total Projects",
+        description: "Innovative web solutions crafted",
+      },
+      {
+        icon: Award,
+        color: "from-[#a855f7] to-[#6366f1]",
+        value: totalCertificates,
+        label: "Certificates",
+        description: "Professional skills validated",
+      },
+      {
+        icon: Globe,
+        color: "from-[#6366f1] to-[#a855f7]",
+        value: YearExperience,
+        label: "Years of Experience",
+        description: "Continuous learning journey",
+      },
+    ],
+    [totalProjects, totalCertificates, YearExperience]
+  );
+
+  return (
+    <motion.div
+      className="h-auto pb-[10%] text-white overflow-hidden px-[5%] sm:px-[5%] lg:px-[10%] mt-10 sm-mt-0"
+      id="About"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Header />
+
+      <motion.div
+        className="w-full mx-auto pt-8 sm:pt-12 relative"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <motion.div
+            className="space-y-6 text-center lg:text-left"
+            variants={containerVariants}
+          >
+            <motion.h2
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold"
+              variants={itemVariants}
+            >
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">
+                Hello, I'm
+              </span>
+              <motion.span
+                className="block mt-2 text-gray-200"
+                variants={itemVariants}
+              >
+                AJITHKUMAR
+              </motion.span>
+            </motion.h2>
+
+            <motion.p
+              className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
+              variants={itemVariants}
+            >
+              I am a Front-End Developer dedicated to building fast, accessible, and user-centric web applications. With a strong foundation in React and Tailwind CSS, I focus on transforming complex designs into seamless digital experiences. During my academic projects, I successfully optimized a site that achieved a 30% improvement in page load speed. I am passionate about writing clean, maintainable code and am currently exploring the intersection of AI and front-end performance. Detail-oriented Front-End Developer with expertise in building responsive web applications using React and modern CSS frameworks. Proven ability to collaborate in agile environments and deliver pixel-perfect designs. Eager to leverage technical skills and problem-solving abilities to drive innovative solutions in a dynamic team.
+            </motion.p>
+
+            <motion.div
+              className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full"
+              variants={itemVariants}
+            >
+              <a
+                href="/path/to/resume.pdf"
+                download="Ajithkumar_Resume.pdf"
+                className="w-full lg:w-auto"
+              >
+                <motion.button
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-white font-medium transition-all duration-300 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5" /> Download CV
+                </motion.button>
+              </a>
+              <a href="#Portofolio" className="w-full lg:w-auto">
+                <motion.button
+                  className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg border border-[#a855f7]/50 text-[#a855f7] font-medium transition-all duration-300 flex items-center justify-center lg:justify-start gap-2 hover:bg-[#a855f7]/10"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Code className="w-4 h-4 sm:w-5 sm:h-5" /> View Projects
+                </motion.button>
+              </a>
+            </motion.div>
+          </motion.div>
+
+          <ProfileImage />
+        </div>
+
+        <a href="#Portofolio">
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 cursor-pointer"
+            variants={containerVariants}
+          >
+            {statsData.map((stat) => (
+              <StatCard key={stat.label} {...stat} />
+            ))}
+          </motion.div>
+        </a>
+      </motion.div>
+    </motion.div>
+  );
+};
+export default memo(AboutPage);
