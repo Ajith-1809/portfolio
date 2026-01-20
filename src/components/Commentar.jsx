@@ -103,7 +103,7 @@ const Commentar = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
 
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    const API_URL = import.meta.env.VITE_API_URL || 'https://portfolio-backend-mgeq.onrender.com';
 
     useEffect(() => {
         AOS.init({ once: false, duration: 1000 });
