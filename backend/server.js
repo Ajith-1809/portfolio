@@ -1,43 +1,39 @@
+require('dotenv').config();
 const express = require('express');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const DB_PATH = path.join(__dirname, 'db.json');
+const DB_FILE = path.join(__dirname, 'db.json');
 
-app.use(cors());
-app.use(bodyParser.json());
+app.use(cors({
+    origin: process.env.FRONTEND_URL || '*', // Allow all if env var not set
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
 
-// Helper function to read from db.json
-const readDb = () => {
-    if (!fs.existsSync(DB_PATH)) {
-        return { comments: [] };
-    }
-    const data = fs.readFileSync(DB_PATH, 'utf8');
-    try {
-        return JSON.parse(data);
-    } catch (e) {
-        console.error("Error parsing db.json:", e);
-        return { comments: [] };
-    }
+app.use(express.json());
+
+// Helper to read/write DB
+const getComments = () => {
+    if (!fs.existsSync(DB_FILE)) return [];
+    const data = fs.readFileSync(DB_FILE);
+    return JSON.parse(data).comments || [];
 };
 
-// Helper function to write to db.json
-const writeDb = (data) => {
-    fs.writeFileSync(DB_PATH, JSON.stringify(data, null, 2), 'utf8');
+const saveComments = (comments) => {
+    fs.writeFileSync(DB_FILE, JSON.stringify({ comments }, null, 2));
 };
 
 // GET /api/comments
 app.get('/api/comments', (req, res) => {
     try {
-        const db = readDb();
-        const sortedComments = db.comments.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-        res.json(sortedComments);
+        const comments = getComments().sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        res.json(comments);
     } catch (error) {
-        console.error('Error reading comments:', error);
+        console.error('Error fetching comments:', error);
         res.status(500).json({ error: 'Failed to retrieve comments' });
     }
 });
@@ -50,7 +46,7 @@ app.post('/api/comments', (req, res) => {
             return res.status(400).json({ error: 'userName and content are required' });
         }
 
-        const db = readDb();
+        const comments = getComments();
         const newComment = {
             id: Date.now().toString(),
             userName,
@@ -58,13 +54,9 @@ app.post('/api/comments', (req, res) => {
             createdAt: new Date().toISOString(),
         };
 
-        if (!Array.isArray(db.comments)) {
-            db.comments = [];
-        }
-
-        db.comments.push(newComment);
-        writeDb(db);
-
+        comments.unshift(newComment);
+        saveComments(comments);
+        
         res.status(201).json(newComment);
     } catch (error) {
         console.error('Error saving comment:', error);
@@ -73,5 +65,5 @@ app.post('/api/comments', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });

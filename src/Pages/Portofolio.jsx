@@ -110,12 +110,13 @@ const techStacks = [
   { icon: "MUI.svg", language: "Material UI" },
   { icon: "vercel.svg", language: "Vercel" },
   { icon: "SweetAlert.svg", language: "SweetAlert2" },
-  { icon: "./dist/nodejs.svg", language: "Node Js" },
-  { icon: "./src/java.svg", language: "Java" },
-  { icon: "./src/Linux.svg", language: "Linux" },
-  { icon: "./src/Hibernate.svg", language: "Hibernate" },
-  { icon: "./src/Spring.svg", language: "SpringBoot" },
-  { icon: "./src/mysql.svg", language: "MySQL" }
+  { icon: "nodejs.svg", language: "Node Js" },
+  { icon: "java.svg", language: "Java" },
+  { icon: "Linux.svg", language: "Linux" },
+  { icon: "Hibernate.svg", language: "Hibernate" },
+  { icon: "Spring.svg", language: "SpringBoot" },
+  { icon: "reactjs.svg", language: "React Js" },
+  { icon: "mysql.svg", language: "MySQL" }
 ];
 
 const containerVariants = {

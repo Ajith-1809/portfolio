@@ -103,18 +103,18 @@ const Commentar = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [error, setError] = useState('');
 
+    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+
     useEffect(() => {
         AOS.init({ once: false, duration: 1000 });
 
         const fetchComments = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/comments');
+                const response = await fetch(`${API_URL}/api/comments`);
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
-                const text = await response.text();
-                console.log('Server response:', text);
-                const data = JSON.parse(text);
+                const data = await response.json();
                 setComments(data);
             } catch (error) {
                 console.error('Error fetching comments:', error);
@@ -123,14 +123,14 @@ const Commentar = () => {
         };
 
         fetchComments();
-    }, []);
+    }, [API_URL]);
 
     const handleCommentSubmit = useCallback(async ({ newComment, userName }) => {
         setError('');
         setIsSubmitting(true);
 
         try {
-            const response = await fetch('http://localhost:3001/api/comments', {
+            const response = await fetch(`${API_URL}/api/comments`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -151,7 +151,7 @@ const Commentar = () => {
         } finally {
             setIsSubmitting(false);
         }
-    }, []);
+    }, [API_URL]);
 
     const formatDate = useCallback((date) => {
         if (!date) return '';

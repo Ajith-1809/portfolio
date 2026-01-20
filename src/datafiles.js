@@ -48,6 +48,6 @@ export const projectData = [
 ];
 
 export const certificateData = [
-  { Img: "/src/DA.jpg" },
-  { Img: "/src/NE.jpg" },
+  { Img: "DA.jpg" },
+  { Img: "NE.jpg" },
 ];

@@ -57,7 +57,7 @@ const ProfileImage = memo(() => (
       <div className="relative">
         <div className="w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
           <motion.img
-            src="./src/Photo.png"
+            src="Photo.png"
             alt="Profile"
             className="w-full h-full object-cover"
             loading="lazy"
