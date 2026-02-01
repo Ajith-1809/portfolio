@@ -194,7 +194,7 @@ const AboutPage = () => {
               className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify pb-4 sm:pb-0"
               variants={itemVariants}
             >
-              I am a Front-End Developer dedicated to building fast, accessible, and user-centric web applications. With a strong foundation in React and Tailwind CSS, I focus on transforming complex designs into seamless digital experiences. During my academic projects, I successfully optimized a site that achieved a 30% improvement in page load speed. I am passionate about writing clean, maintainable code and am currently exploring the intersection of AI and front-end performance. Detail-oriented Front-End Developer with expertise in building responsive web applications using React and modern CSS frameworks. Proven ability to collaborate in agile environments and deliver pixel-perfect designs. Eager to leverage technical skills and problem-solving abilities to drive innovative solutions in a dynamic team.
+              I am a Front-End and Back-End Developer dedicated to building fast, accessible, and user-centric web applications. With a strong foundation in React and Tailwind CSS, I focus on transforming complex designs into seamless digital experiences. During my academic projects, I successfully optimized a site that achieved a 30% improvement in page load speed. I am passionate about writing clean, maintainable code and am currently exploring the intersection of AI and front-end performance. Detail-oriented Front-End Developer with expertise in building responsive web applications using React and modern CSS frameworks. Proven ability to collaborate in agile environments and deliver pixel-perfect designs. Eager to leverage technical skills and problem-solving abilities to drive innovative solutions in a dynamic team.
             </motion.p>
 
             <motion.div
@@ -202,8 +202,8 @@ const AboutPage = () => {
               variants={itemVariants}
             >
               <a
-                href="/path/to/resume.pdf"
-                download="Ajithkumar_Resume.pdf"
+                href="AJITHKUMAR_RESUME.pdf"
+                download="AJITHKUMAR_RESUME.pdf"
                 className="w-full lg:w-auto"
               >
                 <motion.button

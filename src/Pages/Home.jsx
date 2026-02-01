@@ -231,7 +231,7 @@ const Home = () => {
                 className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                 variants={itemVariants}
               >
-                A motivated, self-taught Front-End Developer passionate about building responsive, user-friendly interfaces. Proficient in HTML, CSS, JavaScript, and React, I focus on creating intuitive experiences, demonstrated in my personal projects like an website or a weather app. Eager to apply my skills and learn from experienced teams to deliver innovative web solutions.
+                A motivated, self-taught Front-End and Back-End Developer passionate about building responsive, user-friendly interfaces. Proficient in Java Springboot, MySQL, HTML, CSS, JavaScript, and React Js, Node Js, I focus on creating intuitive experiences, demonstrated in my personal projects like an website or a weather app. Eager to apply my skills and learn from experienced teams to deliver innovative web solutions.
               </motion.p>
 
               {/* Tech Stack */}

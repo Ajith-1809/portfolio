@@ -6,7 +6,7 @@ export const PAUSE_DURATION = 2000;
 
 export const WORDS = ["IT/Software Student", "Tech Enthusiast"];
 export const TITLE_WORDS = ["Frontend", "Backend", "Fullstack"];
-export const TECH_STACK = ["React JS", "Javascript", "HTML/CSS", "Tailwind CSS", "Java", "MySQL"];
+export const TECH_STACK = ["React JS", "Javascript", "HTML/CSS", "Tailwind CSS", "Java", "MySQL", "Node Js", "Express"];
 
 export const SOCIAL_LINKS = [
   { icon: Github, link: "https://github.com/Ajith-1809" },
@@ -20,9 +20,9 @@ export const projectData = [
     Img: "https://picsum.photos/id/1/600/400",
     Title: "Portfolio Website",
     Description: "This project is a complete showcase of my abilities as a Frontend Developer. It features a sleek design, engaging animations, and a custom backend for the interactive comment section. It's built from the ground up to be a perfect blend of aesthetics and functionality.",
-    Link: "#",
+    Link: "https://ajith-hosting.web.app/",
     Github: "https://github.com/Ajith-1809/portfolio",
-    TechStack: ["React", "Tailwind", "Node Js", "Express",],
+    TechStack: ["React", "Tailwind", "Node Js", "Express", "Firebase", "Material UI", "Chart.js"],
     Features: ["Modern UI/UX", "Interactive Animations", "Custom Backend", "Fully Responsive"]
   },
   {
@@ -31,8 +31,8 @@ export const projectData = [
     Title: "Weather App",
     Description: "A real-time weather application that provides accurate forecasts and current conditions for any location worldwide. Built with a focus on clean UI and rapid data fetching.",
     Link: "#",
-    Github: "https://github.com/Ajith-1809/weather-app",
-    TechStack: ["React", "CSS", "OpenWeather API"],
+    Github: "https://github.com/Ajith-1809/Wheather-app.git",
+    TechStack: ["JavaScript", "CSS", "GoogleWeather API"],
     Features: ["Real-time Data", "Location Search", "5-Day Forecast", "Responsive Design"]
   },
   {
@@ -42,8 +42,18 @@ export const projectData = [
     Description: "A comprehensive dashboard for managing online stores, featuring inventory tracking, sales analytics, and user management capabilities.",
     Link: "#",
     Github: "https://github.com/Ajith-1809/ecommerce-dashboard",
-    TechStack: ["React", "Material UI", "Firebase", "Chart.js"],
+    TechStack: ["React", "Material UI", "Firebase", "Chart.js", "Java Springboot", "MySQL"],
     Features: ["Data Visualization", "User Auth", "Inventory Management", "Dark Mode"]
+  },
+  {
+    id: 4,
+    Img: "https://picsum.photos/id/4/600/400",
+    Title: "Store stock inventory Application",
+    Description: "A comprehensive dashboard for managing online stores, featuring inventory tracking, sales analytics, and user management capabilities.",
+    Link: "#",
+    Github: "https://github.com/Ajith-1809",
+    TechStack: ["React", "Material UI", "Firebase", "Chart.js", "Node.js", "MySQL"],
+    Features: ["Data Visualization", "User Auth", "Inventory Management", "SAles Management", "Bill Print", "Whatsapp Bill Sending"]
   },
 ];
 
